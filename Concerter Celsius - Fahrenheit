@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class classe1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int tempCels, tempFar, resultat;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("CONVERTISSEUR DEGRES CELSIUS ET DEGRES FAHRENHEIT");
+		System.out.println("-------------------------------------------------");
+		
+		System.out.println("Choix du mode de conversion :");
+		System.out.println("1 - Convertisseur Celsius - Fahrenheit");
+		System.out.println("2 - Convertisseur Fahrenheit - Celsius");
+		
+		int str = sc.nextInt();
+		
+		if (str == 1) {
+			
+			System.out.println("Température à convertir : ");
+			
+			tempCels = sc.nextInt();
+			
+			float resultat1 = (float)( 1.8 * tempCels +32  );
+			
+			System.out.println(tempCels + " °C correspond à : " + resultat1 + "°F");
+			
+		}
+		
+		else if (str == 2) {
+			
+			System.out.println("Température à convertir : ");
+			
+			tempFar = sc.nextInt();
+			
+			resultat = ((( tempFar - 32)*5) / 9 );
+			
+			System.out.println(tempFar + "°C correspond à : " + resultat  + "°F");
+			
+		}
+		
+		else {
+			
+			System.out.println("Mauvaise valeur entrée");
+		}
+	}
+
+}
